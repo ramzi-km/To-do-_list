@@ -8,4 +8,5 @@ import { Task } from '../../task';
 })
 export class TaskItemComponent {
   @Input() task!: Task;
+  
 }
