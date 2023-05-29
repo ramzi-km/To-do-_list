@@ -11,12 +11,6 @@
       "text": "food shopping",
       "day": "May 7th at 2:30 pm",
       "reminder": true
-    },
-    {
-      "text": "meet doctormeet doctor",
-      "day": "3rd may 5:20 pm",
-      "reminder": true,
-      "id": 4
     }
   ]
 }
