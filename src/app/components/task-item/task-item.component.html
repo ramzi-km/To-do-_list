@@ -1,12 +1,55 @@
-<div [ngClass]="{ reminder: task.reminder }" class="task" (dblclick)="onToggle(task)">
-  <h3>
-    {{ task.text }}
-    <fa-icon
-      (click)="onDelete(task)"
-      [ngStyle]="{ color: 'red' }"
-      [icon]="faTimes"
-    >
-    </fa-icon>
-  </h3>
-  <p>{{ task.day }}</p>
-</div>
+<div *ngIf="task.taskDone == true;then taskDone else taskDue"></div>
+
+<ng-template #taskDue>
+  <div
+    #taskDue
+    [ngClass]="{ reminder: task.reminder }"
+    class="task"
+    (dblclick)="onToggle(task)"
+  >
+    <h3>
+      <div>
+        <input
+          type="checkbox"
+          value="true"
+          (click)="onToggleCheck(task)"
+          [checked]="task.taskDone"
+        />
+        {{ task.text }}
+      </div>
+      <fa-icon
+        (click)="onDelete(task)"
+        [ngStyle]="{ color: 'red' }"
+        [icon]="faTimes"
+      >
+      </fa-icon>
+    </h3>
+    <p>{{ task.day }}</p>
+  </div>
+</ng-template>
+<ng-template #taskDone>
+  <div
+    [ngClass]="{ reminder: task.reminder }"
+    class="task-done"
+    (dblclick)="onToggle(task)"
+  >
+    <h3>
+      <div>
+        <input
+          type="checkbox"
+          value="true"
+          (click)="onToggleCheck(task)"
+          [checked]="task.taskDone"
+        />
+        {{ task.text }}
+      </div>
+      <fa-icon
+        (click)="onDelete(task)"
+        [ngStyle]="{ color: 'red' }"
+        [icon]="faTimes"
+      >
+      </fa-icon>
+    </h3>
+    <p>{{ task.day }}</p>
+  </div>
+</ng-template>

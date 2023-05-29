@@ -2,6 +2,7 @@
 <app-task-item
   (onDeleteTask)="deleteTask(task)"
   (onToggleReminder)="toggleReminder(task)"
+  (onToggleCheckBox)="toggleCheckBox(task)"
   *ngFor="let task of tasks"
   [task]="task"
 >

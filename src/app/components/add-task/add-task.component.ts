@@ -13,6 +13,7 @@ export class AddTaskComponent {
   text!: string;
   day!: string;
   reminder: boolean = false;
+  taskDone: boolean = false;
   showAddTask!: boolean;
   subscription: Subscription;
 
@@ -31,6 +32,7 @@ export class AddTaskComponent {
       text: this.text,
       day: this.day,
       reminder: this.reminder,
+      taskDone:this.taskDone,
     };
 
     this.onAddTask.emit(newTask);
@@ -38,5 +40,6 @@ export class AddTaskComponent {
     this.text = '';
     this.day = '';
     this.reminder = false;
+    this.taskDone = false;
   }
 }

@@ -4,13 +4,15 @@
       "id": 2,
       "text": "Meeting at school",
       "day": "May 6th at 1:45 pm",
-      "reminder": true
+      "reminder": false,
+      "taskDone": false
     },
     {
-      "id": 3,
-      "text": "food shopping",
-      "day": "May 7th at 2:30 pm",
-      "reminder": true
+      "text": "workout",
+      "day": "june 3rd 7:30 am",
+      "reminder": true,
+      "taskDone": false,
+      "id": 3
     }
   ]
 }
